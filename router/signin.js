@@ -27,7 +27,7 @@ router.post('/api/signin', async(req, res) => {
         // generating authentication token and storing it in cookies
         let token = await getUser.generateAuthToken();
         res.cookie('jwt',token,{
-            expires: new Date(Date.now()+ 604800000)
+            expires: new Date(Date.now()+ 300000)
         })
 
         // console.log(req.body)
